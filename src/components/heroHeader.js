@@ -17,7 +17,7 @@ export default () => (
         render={(data) => (
             <div className="hero-header">
                 <div className="headline">
-                Hey there! I'm <a href="https://www.linkedin.com/in/dakshalp/" id="name">Dakshal Panicker.</a> Here
+                Hey there! I'm <a href="https://www.linkedin.com/in/dakshalp/" id="name">Dakshal Panicker</a>. Here
                     you can browse some of my{' '}
                     <Link id="projects" to="/#projects-header">projects</Link> or write a {' '}
                     <Link to="/contact" id="contact">message</Link> to me. 
