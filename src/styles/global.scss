@@ -207,15 +207,13 @@ a {
         font-size: 20px;
         margin-left: 25px;
         margin-right: 5px;
-        transform: translateX(-5px) translateY(-2px) scale(1.5);
+        transform: translateX(-5px) translateY(-2px) scale(1.2);
     }
 }
 .tag-label {
-    margin-right: 10px;
+    margin-right: 12px;
     padding: 10px;
-    color: white;
-    background-color: $accent-1;
-    height: 50vh;
+    color: $accent-1;
 }
 .rmsc {
     font-weight: bold !important;
