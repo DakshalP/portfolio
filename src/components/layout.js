@@ -3,6 +3,11 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Navigation from "../components/navigation"
 import 'prismjs/themes/prism-okaidia.css';
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 export default ({ children }) => {
   const data = useStaticQuery(
     graphql`
@@ -25,7 +30,7 @@ export default ({ children }) => {
       </header>
       {children}
       <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} Delog &bull; Crafted with <span role="img" aria-label="love">❤️</span> by <a href="https://w3layouts.com">W3Layouts</a></p>
+        <p>&copy; {new Date().getFullYear()} Dakshal P &bull; <a href="https://github.com/DakshalP"> Github </a></p>
       </footer>
     </div>
   )
