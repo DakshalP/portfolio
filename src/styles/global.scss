@@ -40,8 +40,8 @@ body.light {
     --btn-text-color: #868892;
     --btn-hover-bg: var(--btn-bdr);
     --btn-hover-text-color: #00062b;
-    --contact-bg: #f7f8fe;
-    --contact-bdr: #d3d6e7;
+    --contact-bg: #cfe0e4;
+    // --contact-bdr: #d3d6e7;
     --input-bg: var(--background);
 }
 body.dark {
@@ -62,11 +62,10 @@ body.dark {
     --btn-text-color: #868892;
     --btn-hover-bg: var(--btn-bdr);
     --btn-hover-text-color: #00062b;
-    --contact-bg: var(--card-shadow);
-    --contact-bdr: var(--card-bg);
+    --contact-bg: rgb(82, 81, 81);
+    // --contact-bdr: var(--card-bg);
     --input-bg: var(--card-bg);
 }
-/* System Fonts as used by Medium and WordPress */
 body {
     font-family: $font-family;
     border-top: 10px solid var(--primary-color);
@@ -378,9 +377,10 @@ a {
     }
 }
 .form-container {
+    font-weight: 900;
     background-color: var(--contact-bg);
     padding: 32px;
-    border: 1px solid var(--contact-bdr);
+    // border: 1px solid var(--contact-bdr);
     border-radius: $main-border-radius;
     label {
         display: block;
@@ -390,6 +390,7 @@ a {
     input[type='text'],
     input[type='email'],
     textarea {
+        font-weight: bold;
         appearance: none;
         border: 1px solid var(--card-shadow);
         color: var(--text-secondary-color);
