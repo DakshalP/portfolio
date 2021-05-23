@@ -203,11 +203,11 @@ a {
     background: var(--background);
     color: var(--text-color);
     line-height: 1.5;
-    > .blog-post-content {
+    > .project-post-content {
         max-width: 768px;
         margin: 0 auto;
     }
-    > .blog-post-content *:last-child,
+    > .project-post-content *:last-child,
     > *:last-child {
         margin-bottom: 0;
     }
