@@ -40,7 +40,6 @@ const IndexPage = ({
         { label: 'React', value: 'react' },
         { label: 'Web', value: 'web' },
         { label: 'Arduino', value: 'arduino' },
-        { label: 'Unity', value: 'unity' },
     ];
 
     const customValueRenderer = (selected, _options) => {
