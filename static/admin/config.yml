@@ -73,7 +73,7 @@ collections:
             name: tagline
             widget: text
             required: true
-            - label: Meta Description
+          - label: Meta Description
             name: metaDescription
             widget: text
             required: false
