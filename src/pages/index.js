@@ -28,10 +28,11 @@ const IndexPage = ({
         .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
 
     const tagOptions = [
-        { label: 'Arduino', value: 'arduino' },
+        { label: 'Featured', value: 'featured' },
         { label: 'React', value: 'react' },
         { label: 'Web', value: 'web' },
-        { label: 'C#', value: 'C#' },
+        { label: 'Arduino', value: 'arduino' },
+        { label: 'Unity', value: 'unity' },
     ];
 
     const customValueRenderer = (selected, _options) => {
