@@ -46,7 +46,7 @@ collections:
                         label: Description
                         default: ''
                         required: false
-    - name: prtoject
+    - name: project
       label: Project
       folder: _data/project
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
