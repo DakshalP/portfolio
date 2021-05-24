@@ -1,5 +1,5 @@
 ---
-template: BlogPost
+template: ProjectPost
 path: /project/linki
 date: 2020-02-20T07:08:53.137Z
 title: Linki

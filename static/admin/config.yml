@@ -46,9 +46,9 @@ collections:
                         label: Description
                         default: ''
                         required: false
-    - name: blog
-      label: Blog
-      folder: _data/blog
+    - name: prtoject
+      label: Project
+      folder: _data/project
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
       create: true
       fields:
@@ -56,7 +56,7 @@ collections:
                 label: Template,
                 name: template,
                 widget: hidden,
-                default: BlogPost,
+                default: ProjectPost,
             }
           - name: path
             label: Path
