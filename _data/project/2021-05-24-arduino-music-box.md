@@ -10,6 +10,6 @@ tagline: >-
 metaDescription: >-
   A small arduino music box placed inside a mint tin. Plays songs through a
   piezo buzzer, reminiscent of older video game music. 
-thumbnail: /assets/MusicBox.jpeg
+thumbnail: /assets/ArduinoMusicBox.jpeg
 ---
 Still working on this content.
