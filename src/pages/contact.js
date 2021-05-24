@@ -1,9 +1,39 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
+import { navigate, graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 const ContactPage = ({ data: { site } }) => {
+    function encode(data) {
+        return Object.keys(data)
+            .map(
+                (key) =>
+                    encodeURIComponent(key) +
+                    '=' +
+                    encodeURIComponent(data[key])
+            )
+            .join('&');
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const inputs = event.target.elements;
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({
+                'form-name': event.target.getAttribute('name'),
+                name: inputs['name'].value,
+                email: inputs['email'].value,
+                message: inputs['message'].value,
+            }),
+        })
+            .then(() => navigate('/'))
+            .catch((error) => alert(error));
+    };
+
     return (
         <Layout>
             <Helmet>
@@ -31,7 +61,9 @@ const ContactPage = ({ data: { site } }) => {
                         method="POST"
                         data-netlify="true"
                         netlify-honeypot="bot-field"
+                        onSubmit={handleSubmit}
                     >
+                        <input type="hidden" name="form-name" value="contact" />
                         <p style={{ position: 'absolute', opacity: '0%' }}>
                             <label>
                                 Don’t fill this out if you’re human (bot
@@ -44,7 +76,7 @@ const ContactPage = ({ data: { site } }) => {
                         </div>
                         <div>
                             <label htmlFor="Sender">Email</label>
-                            <input required type="email" name="name" />
+                            <input required type="email" name="email" />
                         </div>
                         <div>
                             <label htmlFor="Message">Message</label>
