@@ -66,7 +66,11 @@ const ContactPage = ({ data: { site } }) => {
                             <input
                                 type="submit"
                                 className="button -primary"
-                                style={{ marginRight: 0 }}
+                                style={{
+                                    marginRight: 0,
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                }}
                             />
                         </div>
                     </form>
