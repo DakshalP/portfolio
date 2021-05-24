@@ -23,6 +23,7 @@ const IndexPage = ({
                         return true;
                 }
             else return true;
+            return false;
         })
         .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
 
