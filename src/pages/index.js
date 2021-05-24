@@ -67,7 +67,7 @@ const IndexPage = ({
     return (
         <Layout>
             <Helmet>
-                <title>{site.siteMetadata.title}</title>
+                <title>Dakshal's Portfolio</title>
                 <meta
                     name="description"
                     content={site.siteMetadata.description}

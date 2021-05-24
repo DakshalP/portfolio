@@ -37,7 +37,7 @@ const ContactPage = ({ data: { site } }) => {
     return (
         <Layout>
             <Helmet>
-                <title>Contact — {site.siteMetadata.title}</title>
+                <title>Contact Me</title>
                 <meta
                     name="description"
                     content={'Contact page of ' + site.siteMetadata.description}
