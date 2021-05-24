@@ -30,7 +30,7 @@ const ContactPage = ({ data: { site } }) => {
                 message: inputs['message'].value,
             }),
         })
-            .then(() => navigate('/'))
+            .then(() => navigate('/send-success'))
             .catch((error) => alert(error));
     };
 
