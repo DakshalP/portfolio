@@ -1,11 +1,10 @@
 ---
 template: BlogPost
-path: /hello-world
+path: /project/linki
 date: 2020-02-20T07:08:53.137Z
-title: Hello World
+title: 'Linki: Store your online meeting links'
+tags: 'web, react'
+metaDescription: A project using create-react-app to make a way to store online meeting links
 thumbnail: ''
-metaDescription: Meta description for Hello World
-tags: test, test
 ---
-
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique fugiat delectus pariatur blanditiis nulla soluta ratione nostrum, harum maiores adipisci a quod nobis cupiditate quae odit unde qui sit consequuntur.
+This is a test. I will fill the rest out later.
