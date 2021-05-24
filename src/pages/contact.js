@@ -22,7 +22,7 @@ const ContactPage = ({ data: { site } }) => {
                     }}
                 >
                     <h1 className="post-title">Get in Touch</h1>
-                    <p>You can use this form to get in touch with me!</p>
+                    <p>You can use this form to contact me!</p>
                 </div>
                 <div>
                     <form
@@ -40,29 +40,15 @@ const ContactPage = ({ data: { site } }) => {
                         </p>
                         <div>
                             <label htmlFor="Name">Name</label>
-                            <input
-                                required
-                                type="text"
-                                name="name"
-                                id="w3lName"
-                            />
+                            <input required type="text" name="name" />
                         </div>
                         <div>
                             <label htmlFor="Sender">Email</label>
-                            <input
-                                required
-                                type="email"
-                                name="name"
-                                id="w3lSender"
-                            />
+                            <input required type="email" name="name" />
                         </div>
                         <div>
                             <label htmlFor="Message">Message</label>
-                            <textarea
-                                required
-                                name="message"
-                                id="w3lMessage"
-                            ></textarea>
+                            <textarea required name="message"></textarea>
                         </div>
                         <div
                             style={{
@@ -70,7 +56,7 @@ const ContactPage = ({ data: { site } }) => {
                                 justifyContent: 'flex-end',
                             }}
                         >
-                            <input
+                            <button
                                 type="submit"
                                 className="button -primary"
                                 style={{
@@ -78,7 +64,9 @@ const ContactPage = ({ data: { site } }) => {
                                     border: 'none',
                                     cursor: 'pointer',
                                 }}
-                            />
+                            >
+                                Send
+                            </button>
                         </div>
                     </form>
                 </div>
