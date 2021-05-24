@@ -30,7 +30,14 @@ const ContactPage = ({ data: { site } }) => {
                         className="form-container"
                         method="POST"
                         data-netlify="true"
+                        netlify-honeypot="bot-field"
                     >
+                        <p style={{ position: 'absolute', opacity: '0%' }}>
+                            <label>
+                                Don’t fill this out if you’re human (bot
+                                prevention field): <input name="bot-field" />
+                            </label>
+                        </p>
                         <div>
                             <label htmlFor="Name">Name</label>
                             <input
