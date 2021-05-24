@@ -201,14 +201,14 @@ a {
     }
 }
 .tag-picker {
-    color: $accent-1;
+    color: $accent-3;
 
     width: fit-content;
     min-width: 150px;
     max-width: 83vw;
 
     #clear {
-        color: $accent-1;
+        color: $accent-3;
         font-style: normal;
         font-size: 20px;
         margin-left: 25px;
@@ -219,7 +219,6 @@ a {
 .tag-label {
     margin-right: 12px;
     padding: 10px;
-    color: $accent-1;
 }
 .rmsc {
     font-weight: bold !important;
@@ -366,9 +365,9 @@ a {
         border-radius: $main-border-radius;
 
         background-color: $accent-3;
-        &:nth-child(2n) {
-            background-color: $accent-2;
-        }
+        // &:nth-child(2n) {
+        //     background-color: $accent-2;
+        // }
     }
 }
 .post-meta {

@@ -69,7 +69,11 @@ collections:
             label: Tags
             widget: text
             required: false
-          - label: Meta Description
+          - label: Tagline
+            name: tagline
+            widget: text
+            required: true
+            - label: Meta Description
             name: metaDescription
             widget: text
             required: false

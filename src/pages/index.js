@@ -12,20 +12,28 @@ const IndexPage = ({
         allMarkdownRemark: { edges },
     },
 }) => {
-    const [selectedTags, setSelectedTags] = useState([]);
+    const [selectedTags, setSelectedTags] = useState([
+        { label: 'Featured', value: 'featured' },
+    ]);
 
-    const Posts = edges
-        .filter((edge) => !!edge.node.frontmatter.tags) // You can filter your posts based on some criteri
-        .filter((edge) => {
-            if (selectedTags.length > 0)
-                for (let obj of selectedTags) {
-                    if (edge.node.frontmatter.tags.includes(obj.value))
-                        return true;
-                }
-            else return true;
-            return false;
-        })
-        .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
+    let Posts = null;
+    if (selectedTags.length > 0) {
+        Posts = edges
+            .filter((edge) => !!edge.node.frontmatter.tags) // You can filter your posts based on some criteri
+            .filter((edge) => {
+                if (selectedTags.length > 0)
+                    for (let obj of selectedTags) {
+                        if (edge.node.frontmatter.tags.includes(obj.value))
+                            return true;
+                    }
+                else return true;
+                return false;
+            })
+            .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
+    } else
+        Posts = edges.map((edge) => (
+            <PostLink key={edge.node.id} post={edge.node} />
+        ));
 
     const tagOptions = [
         { label: 'Featured', value: 'featured' },
@@ -108,7 +116,7 @@ export const pageQuery = graphql`
                     id
                     excerpt(pruneLength: 250)
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
+                        tagline
                         path
                         title
                         thumbnail

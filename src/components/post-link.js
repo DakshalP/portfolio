@@ -17,13 +17,15 @@ const PostLink = ({ post }) => (
                     {post.frontmatter.title}
                 </Link>
             </h2>
-            <div className="post-meta">{post.frontmatter.date}</div>
+            <div className="post-meta">{post.frontmatter.tagline}</div>
             <div className="post-tags">
-                {(post.frontmatter.tags) ? post.frontmatter.tags.split(',').map((tag) => (
-                    <span className="post-tag" key={tag}>
-                        {tag}
-                    </span>
-                )): null}
+                {post.frontmatter.tags
+                    ? post.frontmatter.tags.split(',').map((tag) => (
+                          <span className="post-tag" key={tag}>
+                              {tag}
+                          </span>
+                      ))
+                    : null}
             </div>
         </header>
     </article>
