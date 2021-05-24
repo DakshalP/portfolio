@@ -29,6 +29,7 @@ body.light {
     --primary-text-color: #fff;
     --featured-bg: #5393fe;
     --featured-text: #fff;
+    --sub-header: darkgray;
     --secondary-color: #10072b;
     --background: #fff;
     --site-header: var(--background);
@@ -49,6 +50,7 @@ body.dark {
     --primary-text-color: rgb(0, 0, 0);
     --featured-bg: #5393fe;
     --featured-text: #fff;
+    --sub-header: #8b8686;
     --secondary-color: #5393fe;
     --background: #29292a;
     --text-color: rgba(255, 255, 255, 0.88);
@@ -166,6 +168,10 @@ a {
 }
 #projects-header {
     padding-top: 20px;
+    font-size: 1.2em;
+    padding-left: 2px;
+    font-weight: 900;
+    color: var(--sub-header);
 }
 .button {
     padding: 14px 27px;
