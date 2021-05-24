@@ -67,7 +67,7 @@ collections:
           - { name: title, label: Title }
           - name: tags
             label: Tags
-            widget: list
+            widget: text
             required: false
           - label: Meta Description
             name: metaDescription
