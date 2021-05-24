@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-starter-delog",
-  "description": "A simplified blog for developers and designer. This starter built with Gatsby and Netlify CMS",
-  "author": "W3Layouts Team <info@w3layouts.com>",
+  "name": "dakshal-portfolio",
+  "description": "My personal site for showcasing my work.",
+  "author": "Dakshal P",
   "version": "1.6.0",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/W3Layouts/gatsby-starter-delog/issues"
-  },
   "dependencies": {
     "gatsby": "^2.21.0",
     "gatsby-plugin-dark-mode": "^1.1.1",

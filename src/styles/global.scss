@@ -127,7 +127,7 @@ a {
     max-width: 980px;
 }
 .headline {
-    font-size: 3em;
+    font-size: clamp(2.15em, 9vw, 3.5em);
     font-weight: 900;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
