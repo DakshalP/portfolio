@@ -46,8 +46,8 @@ body.light {
     --input-bg: var(--background);
 }
 body.dark {
-    --primary-color: #ffffff;
-    --primary-text-color: rgb(0, 0, 0);
+    --primary-color: #5393fe;
+    --primary-text-color: rgb(255, 255, 255);
     --featured-bg: #5393fe;
     --featured-text: #fff;
     --sub-header: #8b8686;
@@ -61,7 +61,7 @@ body.dark {
     // --card-shadow: #1d1d1d;
     --btn-bg: var(--background);
     // --btn-bdr: #d3d6e700;
-    --btn-text-color: #868892;
+    --btn-text-color: #ffffff;
     --btn-hover-bg: var(--btn-bdr);
     --btn-hover-text-color: #00062b;
     --contact-bg: rgb(82, 81, 81);
@@ -77,9 +77,6 @@ body {
 a {
     color: var(--primary-color);
     text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
 }
 .site-wrapper {
     padding: 32px;
@@ -257,6 +254,13 @@ a {
     background: var(--background);
     color: var(--text-color);
     line-height: 1.5;
+
+    a {
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline 2px;
+        }
+    }
     > .project-post-content {
         max-width: 768px;
         margin: 0 auto;
@@ -332,13 +336,12 @@ a {
     &:hover {
         transition: transform 0.2s;
         transform: scale(1.005);
-    }
 
-    &:hover .post-link {
-        transition: color 0.3s;
-        color: var(--primary-color);
+        .post-link {
+            font-weight: 900;
+        }
     }
-    > a img {
+    > img {
         display: block;
     }
     > header {
