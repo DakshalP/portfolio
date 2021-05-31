@@ -12,4 +12,4 @@ metaDescription: >-
   piezo buzzer, reminiscent of older video game music. 
 thumbnail: /assets/ArduinoMusicBox.jpeg
 ---
-Still working on this content.
+I'm still working on a description of this project. Till it's done, check out the original code for the music box at https://github.com/DakshalP/arduino-song
