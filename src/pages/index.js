@@ -12,42 +12,56 @@ const IndexPage = ({
         allMarkdownRemark: { edges },
     },
 }) => {
-    const [selectedTags, setSelectedTags] = useState([
-        { label: 'Featured', value: 'featured' },
-    ]);
-
-    let Posts = null;
-    if (selectedTags.length > 0) {
-        Posts = edges
-            .filter((edge) => !!edge.node.frontmatter.tags) // You can filter your posts based on some criteri
-            .filter((edge) => {
-                if (selectedTags.length > 0)
-                    for (let obj of selectedTags) {
-                        if (edge.node.frontmatter.tags.includes(obj.value))
-                            return true;
-                    }
-                else return true;
-                return false;
-            })
-            .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
-    } else
-        Posts = edges.map((edge) => (
-            <PostLink key={edge.node.id} post={edge.node} />
-        ));
+    const [selectedTags, setSelectedTags] = useState([]);
 
     const tagOptions = [
-        { label: 'Featured', value: 'featured' },
         { label: 'React', value: 'react' },
         { label: 'Web', value: 'web' },
         { label: 'Arduino', value: 'arduino' },
     ];
+
+    const getPostsByTag = (tagObj) =>
+        edges
+            .filter((edge) => !!edge.node.frontmatter.tags) //filter by tag
+            .filter((edge) =>
+                edge.node.frontmatter.tags.includes(tagObj.value)
+            );
+
+    const renderPosts = (edges) =>
+        edges.map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
+
+    let Posts = null;
+    if (selectedTags.length > 0) {
+        let taggedPosts = [];
+        for (let tag of selectedTags)
+            taggedPosts = taggedPosts.concat(getPostsByTag(tag));
+        //remove duplicates from multiple tags
+        taggedPosts = [...new Set(taggedPosts)];
+
+        Posts = <div className="grids">{renderPosts(taggedPosts)}</div>;
+    } else {
+        //if no tag selected
+
+        Posts = (
+            <>
+                <div className="grids">
+                    {renderPosts(
+                        getPostsByTag({
+                            label: 'Featured',
+                            value: 'featured',
+                        })
+                    )}
+                </div>
+            </>
+        );
+    }
 
     const customValueRenderer = (selected, _options) => {
         return selected.length
             ? selected.map(({ label }) => (
                   <span className="tag-label">{label}</span>
               ))
-            : 'Sort by tags...';
+            : 'More...';
     };
     const CustomItemRenderer = ({ checked, option, onClick, disabled }) => (
         <div className={`item-renderer ${disabled && 'disabled'}`}>
@@ -74,7 +88,9 @@ const IndexPage = ({
                 />
             </Helmet>
             <HeroHeader />
-            <h2 id="projects-header">Projects</h2>
+            <h2 id="projects-header">
+                {selectedTags.length > 0 ? 'Projects' : 'Featured Projects'}
+            </h2>
             <div className="tag-picker">
                 <MultiSelect
                     options={tagOptions}
@@ -85,17 +101,15 @@ const IndexPage = ({
                     overrideStrings={{
                         allItemsAreSelected: 'All projects.',
                         selectAll: 'All',
-                        selectSomeItems: 'Sort by tag...',
                     }}
                     ClearSelectedIcon={<i id="clear">✖</i>}
                     ArrowRenderer={Arrow}
                     ItemRenderer={CustomItemRenderer}
                     valueRenderer={customValueRenderer}
-                    hasSelectAll={false}
                 />
             </div>
 
-            <div className="grids">{Posts}</div>
+            {Posts}
         </Layout>
     );
 };

@@ -29,7 +29,7 @@ body.light {
     --primary-text-color: #fff;
     --featured-bg: #5393fe;
     --featured-text: #fff;
-    --sub-header: darkgray;
+    --sub-header: rgb(151, 156, 156);
     --secondary-color: #10072b;
     --background: #fff;
     --site-header: var(--background);
@@ -167,11 +167,17 @@ a {
     }
 }
 #projects-header {
+    margin-top: 0;
     padding-top: 20px;
-    font-size: 1.2em;
     padding-left: 2px;
-    font-weight: 900;
+    font-size: 1.5em;
     color: var(--sub-header);
+}
+.posts-header {
+    margin-top: 40px;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: var(--primary-color);
 }
 .button {
     padding: 14px 27px;
@@ -204,7 +210,7 @@ a {
     color: $accent-3;
 
     width: fit-content;
-    min-width: 150px;
+    min-width: 120px;
     max-width: 83vw;
 
     #clear {
@@ -338,7 +344,7 @@ a {
     > header {
         padding: 24px;
     }
-    > h2:first-child {
+    > #projects-header:first-child {
         margin: 0 0 0.5rem 0;
     }
     .post-title {
