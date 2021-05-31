@@ -322,6 +322,7 @@ a {
     margin-top: 32px;
 }
 .card {
+    color: $main-text-color;
     display: grid;
     background-color: var(--card-bg);
     border-radius: $main-border-radius;
