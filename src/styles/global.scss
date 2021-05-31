@@ -11,6 +11,8 @@ $accent-3: #6cbb47;
 
 $main-border-radius: 3px;
 
+$animate: all 0.2s ease-in-out;
+
 html,
 body {
     margin: 0;
@@ -339,7 +341,8 @@ a {
         transform: scale(1.005);
 
         .post-link {
-            font-weight: 900;
+            transition: color 0.3s;
+            color: $accent-1;
         }
     }
     > img {
@@ -355,13 +358,20 @@ a {
         font-size: 1.2rem;
         margin-bottom: 0.3rem;
     }
-    .post-meta {
-        font-weight: 100;
+    .post-tagline {
         margin-bottom: 0;
+        font-size: 0.9rem;
+        color: var(--text-secondary-color);
     }
     .post-link {
         color: var(--text-color);
         text-decoration: none;
+        font-weight: 900;
+
+        &:hover {
+            transition: 2s all;
+            transform: scale(1.2);
+        }
     }
     .post-tags {
         margin: 10px 0px;
@@ -379,10 +389,41 @@ a {
         //     background-color: $accent-2;
         // }
     }
-}
-.post-meta {
-    font-size: 0.8rem;
-    color: var(--text-secondary-color);
+
+    .underline {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        transition: $animate;
+        position: relative;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            width: 0px;
+            height: 3px;
+            margin: 5px 0 0;
+            transition: $animate;
+            opacity: 0;
+            background-color: darken($accent-1, 5%);
+        }
+        &.underline {
+            &:before,
+            &:after {
+                left: 0;
+            }
+        }
+    }
+    &:hover {
+        .underline {
+            &:before,
+            &:after {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+    }
 }
 .site-footer {
     text-align: center;

@@ -14,11 +14,14 @@ const PostLink = ({ post }) => (
 
         <header>
             <h2 className="post-title">
-                <Link to={post.frontmatter.path} className="post-link">
+                <Link
+                    to={post.frontmatter.path}
+                    className="post-link hover underline"
+                >
                     {post.frontmatter.title}
                 </Link>
             </h2>
-            <div className="post-meta">{post.frontmatter.tagline}</div>
+            <div className="post-tagline">{post.frontmatter.tagline}</div>
             <div className="post-tags">
                 {post.frontmatter.tags
                     ? post.frontmatter.tags.split(',').map((tag) => (
