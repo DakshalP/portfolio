@@ -390,7 +390,7 @@ a {
     }
     .post-tags {
         margin: 10px 0px;
-        color: $accent-1;
+        color: darkgray;
     }
     .post-tag {
         font-size: 0.75em;
@@ -400,10 +400,7 @@ a {
         border-radius: $main-border-radius;
         border: 1.5px solid;
 
-        border-color: $accent-1;
-        // &:nth-child(2n) {
-        //     background-color: $accent-2;
-        // }
+        border-color: lightgray;
     }
 
     .underline {
