@@ -31,8 +31,8 @@ body.light {
     --primary-text-color: #fff;
     --featured-bg: #5393fe;
     --featured-text: #fff;
-    --sub-header: rgb(151, 156, 156);
-    --secondary-color: #10072b;
+    --sub-header: $main-text-color;
+    --secondary-color: #264272;
     --background: #fff;
     --site-header: var(--background);
     --card-bg: #fff;
@@ -53,7 +53,7 @@ body.dark {
     --featured-bg: #5393fe;
     --featured-text: #fff;
     --sub-header: #8b8686;
-    --secondary-color: #5393fe;
+    --secondary-color: #7aabff;
     --background: #29292a;
     --text-color: rgba(255, 255, 255, 0.88);
     --text-secondary-color: rgba(255, 255, 255, 0.66);
@@ -124,7 +124,7 @@ a {
     text-transform: uppercase;
 }
 .hero-header {
-    padding: 0 0 64px;
+    padding: 0 0 95px;
     max-width: 980px;
 }
 .headline {
@@ -167,7 +167,6 @@ a {
 }
 #projects-header {
     margin-top: 0;
-    padding-top: 20px;
     padding-left: 2px;
     font-size: 1.5em;
     color: var(--sub-header);
@@ -189,7 +188,7 @@ a {
     font-size: 16px;
     font-weight: 700;
     margin: 0 20px 0 0;
-    transition: background-color 0.3s linear;
+    transition: background-color 0.2s linear;
     &.-primary {
         background-color: var(--primary-color);
         border-color: var(--primary-color);
@@ -200,13 +199,23 @@ a {
             text-decoration: none;
         }
     }
+    &.-secondary {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+        border: 2px solid;
+        &:hover {
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            text-decoration: none;
+        }
+    }
     &:hover {
         background-color: var(--btn-hover-bg);
         color: var(--btn-hover-text-color);
     }
 }
 .tag-picker {
-    color: $accent-3;
+    color: $accent-1;
 
     width: fit-content;
     min-width: 120px;
@@ -230,11 +239,11 @@ a {
     font-size: 18px;
     //multi select dropdown
     --rmsc-main: var(--primary-color) !important;
-    --rmsc-hover: #f1f3f5;
+    --rmsc-hover: lightgray !important;
     --rmsc-selected: #e2e6ea;
-    --rmsc-border: rgba(0, 0, 0, 0.1) !important;
+    --rmsc-border: lightgray !important;
     --rmsc-gray: #aaa;
-    --rmsc-bg: rgb(17, 15, 15);
+    --rmsc-bg: var(--background) !important;
     --rmsc-p: 15px !important; /* Spacing */
     --rmsc-radius: 2px; /* Radius */
     --rmsc-h: 44px !important; /* Height */
@@ -319,25 +328,25 @@ a {
 }
 .grids {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 40px;
     margin-top: 32px;
 }
+
 .card {
     color: $main-text-color;
     display: grid;
     background-color: var(--card-bg);
-    border-radius: $main-border-radius;
+    border-radius: 7px;
     // border: 1px solid var(--card-bdr);
     // box-shadow: 0 0 30px var(--card-shadow);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
-        0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
-        0 8px 16px rgba(0, 0, 0, 0.11);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
     overflow: hidden;
     line-height: 1.5;
     &:hover {
-        transition: transform 0.2s;
+        transition: transform 0.1s;
         transform: scale(1.005);
 
         .post-link {
@@ -347,6 +356,12 @@ a {
     }
     > a > img {
         display: block;
+        height: 100%;
+        filter: brightness(0.96) saturate(0.9);
+        &:hover {
+            transition: filter 0.3s;
+            filter: brightness(0.94);
+        }
     }
     > header {
         padding: 24px;
@@ -360,7 +375,7 @@ a {
     }
     .post-tagline {
         margin-bottom: 0;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         color: var(--text-secondary-color);
     }
     .post-link {
@@ -375,16 +390,17 @@ a {
     }
     .post-tags {
         margin: 10px 0px;
-        color: var(--featured-text);
+        color: $accent-1;
     }
     .post-tag {
         font-size: 0.75em;
         font-weight: 700;
         padding: 2px 6px;
-        margin-right: 5px;
+        margin-right: 6px;
         border-radius: $main-border-radius;
+        border: 1.5px solid;
 
-        background-color: $accent-3;
+        border-color: $accent-1;
         // &:nth-child(2n) {
         //     background-color: $accent-2;
         // }
