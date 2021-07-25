@@ -113,11 +113,11 @@ const IndexPage = ({
             </div>
             {Posts}
             {/* //TODO: Add about section */}
-            <h2 id="about-header">About</h2>
-            <div className="grids">
+            {/* <h2 id="about-header">About</h2> */}
+            {/* <div className="grids">
                 <div className="card long">Test</div>
                 <div className="card">Test</div>
-            </div>
+            </div> */}
             {/* //TODO: Add return to top floating button */}
             {/* <Link to="/" id="return-to-top"></Link> */}
         </Layout>
