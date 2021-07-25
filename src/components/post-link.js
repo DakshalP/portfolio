@@ -24,11 +24,14 @@ const PostLink = ({ post }) => (
             <div className="post-tagline">{post.frontmatter.tagline}</div>
             <div className="post-tags">
                 {post.frontmatter.tags
-                    ? post.frontmatter.tags.split(',').map((tag) => (
-                          <span className="post-tag" key={tag}>
-                              {tag}
-                          </span>
-                      ))
+                    ? post.frontmatter.tags
+                          .split(',')
+                          .filter((tag) => tag !== 'featured')
+                          .map((tag) => (
+                              <span className="post-tag" key={tag}>
+                                  {tag}
+                              </span>
+                          ))
                     : null}
             </div>
         </header>
