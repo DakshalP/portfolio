@@ -98,18 +98,28 @@ const IndexPage = ({
                     onChange={setSelectedTags}
                     labelledBy="Select tags"
                     disableSearch
-                    overrideStrings={{
-                        allItemsAreSelected: 'All projects.',
-                        selectAll: 'All',
-                    }}
+                    //disabled select all for now
+                    hasSelectAll={false}
+                    // overrideStrings={{
+                    //     allItemsAreSelected: 'All projects.',
+                    //     selectAll: 'All',
+                    // }}
+
                     ClearSelectedIcon={<i id="clear">✖</i>}
                     ArrowRenderer={Arrow}
                     ItemRenderer={CustomItemRenderer}
                     valueRenderer={customValueRenderer}
                 />
             </div>
-
             {Posts}
+            {/* //TODO: Add about section */}
+            <h2 id="about-header">About</h2>
+            <div className="grids">
+                <div className="card long">Test</div>
+                <div className="card">Test</div>
+            </div>
+            {/* //TODO: Add return to top floating button */}
+            {/* <Link to="/" id="return-to-top"></Link> */}
         </Layout>
     );
 };
