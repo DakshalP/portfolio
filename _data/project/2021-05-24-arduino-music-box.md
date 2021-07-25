@@ -12,4 +12,16 @@ metaDescription: >-
   piezo buzzer, reminiscent of older video game music. 
 thumbnail: /assets/ArduinoMusicBox.jpeg
 ---
-I'm still working on a description of this project. Till it's done, check out the original code for the music box at https://github.com/DakshalP/arduino-song
+Creating projects with Arduino is one of my favorite hobbies. I created the original Arduino music box 5 years ago. I have added features to it over the years, including a no-contact trigger for the box through an ultrasonic distance sensor. 
+
+Check out the original code for the music box at https://github.com/DakshalP/arduino-song
+
+# Built With 
+* Arduino
+* C
+* HC-SR04 Ultrasonic Sensor
+* Piezo Buzzer
+
+# Tutorial
+*Here is a tutorial I made on how to create your own Arduino music box.*
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/k-R3crBc5QY?start=67" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
