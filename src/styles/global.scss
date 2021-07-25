@@ -319,8 +319,8 @@ a {
 }
 .grids {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
     margin-top: 32px;
 }
 .card {
@@ -345,7 +345,7 @@ a {
             color: $accent-1;
         }
     }
-    > img {
+    > a > img {
         display: block;
     }
     > header {
@@ -471,22 +471,6 @@ a {
         .post-thumbnail {
             min-height: 240px !important;
         }
-    }
-}
-/* Portrait and Landscape */
-@media only screen and (min-width: 768px) {
-    .grids {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media only screen and (min-width: 1024px) {
-    .grids {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .two-grids {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 64px;
     }
 }
 
