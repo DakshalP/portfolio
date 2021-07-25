@@ -164,10 +164,12 @@ a {
         }
     }
 }
-h2 {
-    padding-top: 90px;
+#projects-header,
+#about-header {
+    padding-top: 110px;
     padding-left: 2px;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    letter-spacing: 2px;
     color: var(--sub-header);
 }
 .posts-header {
@@ -274,6 +276,7 @@ h2 {
     > .project-post-content {
         max-width: 768px;
         margin: 0 auto;
+        text-align: justify;
     }
     > .project-post-content *:last-child,
     > *:last-child {
@@ -281,7 +284,6 @@ h2 {
     }
     .post-title {
         text-align: center;
-        margin: 0 0 0.5rem;
         line-height: 1.3;
         font-size: 2rem;
     }
@@ -359,7 +361,7 @@ h2 {
 
     #featuredImage {
         display: block;
-        height: 12em;
+        height: 14em;
         width: 100%;
         background-size: cover;
         background-position: top;
@@ -377,19 +379,18 @@ h2 {
         margin: 0 0 0.5rem 0;
     }
     .post-title {
-        font-size: 1.3rem;
-        margin-bottom: 0.3rem;
+        font-size: 1.6rem;
+        font-weight: 900;
+        margin-bottom: 10px;
     }
     .post-tagline {
         margin-bottom: 0;
-        font-size: 0.85rem;
         min-height: 50px;
         color: var(--text-secondary-color);
     }
     .post-link {
         color: var(--text-color);
         text-decoration: none;
-        font-weight: 900;
 
         &:hover {
             transition: 2s all;
