@@ -30,7 +30,11 @@ const IndexPage = ({
     const renderPosts = (edges) =>
         edges.map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
 
+    /* Fetch Posts */
+
     let Posts = null;
+
+    //based on tag
     if (selectedTags.length > 0) {
         let taggedPosts = [];
         for (let tag of selectedTags)
@@ -40,8 +44,7 @@ const IndexPage = ({
 
         Posts = <div className="grids">{renderPosts(taggedPosts)}</div>;
     } else {
-        //if no tag selected
-
+        // no tag selected
         Posts = (
             <>
                 <div className="grids">
@@ -55,6 +58,8 @@ const IndexPage = ({
             </>
         );
     }
+
+    //tag dropdown parameters
 
     const customValueRenderer = (selected, _options) => {
         return selected.length
@@ -76,7 +81,9 @@ const IndexPage = ({
             <span>{option.label}</span>
         </div>
     );
-    const Arrow = () => <></>;
+    const Arrow = () => (
+        <span id="arrow">{selectedTags.length === 0 ? '▼' : ''}</span>
+    );
 
     return (
         <Layout>
@@ -113,10 +120,10 @@ const IndexPage = ({
             </div>
             {Posts}
             {/* //TODO: Add about section */}
-            {/* <h2 id="about-header">About</h2> */}
-            {/* <div className="grids">
-                <div className="card long">Test</div>
-                <div className="card">Test</div>
+            {/* <h2 id="about-header">About</h2>
+            <div className="grids">
+                <div>Test</div>
+                <div>Test</div>
             </div> */}
             {/* //TODO: Add return to top floating button */}
             {/* <Link to="/" id="return-to-top"></Link> */}
