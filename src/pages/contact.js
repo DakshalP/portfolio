@@ -44,15 +44,9 @@ const ContactPage = ({ data: { site } }) => {
                 />
             </Helmet>
             <div className="two-grids -contact">
-                <div
-                    className="post-thumbnail"
-                    style={{
-                        backgroundImage: `url('https://images.unsplash.com/photo-1601436155198-2ebfea8117b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80')`,
-                        marginBottom: 0,
-                    }}
-                >
-                    <h1 className="post-title">Get in Touch</h1>
-                    <p>You can use this form to contact me!</p>
+                <div className="contact-header">
+                    <img src="/assets/mail.svg" alt="" />
+                    <h1>Contact</h1>
                 </div>
                 <div>
                     <form
@@ -90,7 +84,7 @@ const ContactPage = ({ data: { site } }) => {
                         >
                             <button
                                 type="submit"
-                                className="button -primary"
+                                className="button -secondary"
                                 style={{
                                     marginRight: 0,
                                     border: 'none',
