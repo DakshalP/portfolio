@@ -18,9 +18,9 @@ export default () => (
             <div className="hero-header">
                 <div className="headline">
                     Hello! I'm{' '}
-                    <a href="https://www.linkedin.com/in/dakshalp/" id="name">
+                    <Link id="name" to="https://www.linkedin.com/in/dakshalp/">
                         Dakshal Panicker
-                    </a>
+                    </Link>
                     . Here you can browse some of my{' '}
                     <Link id="projects" to="/#projects-header">
                         projects

@@ -16,7 +16,9 @@ const IndexPage = ({
 
     const tagOptions = [
         { label: 'React', value: 'react' },
-        { label: 'Web', value: 'web' },
+        { label: 'Web (JS)', value: 'web' },
+        { label: 'Gatsby', value: 'gatsby' },
+        { label: 'SCSS', value: 'scss' },
         { label: 'Arduino', value: 'arduino' },
     ];
 
@@ -122,8 +124,14 @@ const IndexPage = ({
             {/* //TODO: Add about section */}
             {/* <h2 id="about-header">About</h2>
             <div className="grids">
-                <div>Test</div>
-                <div>Test</div>
+                <img
+                    class="card"
+                    src="/assets/me.png"
+                    alt="Dakshal as a drawing"
+                />
+                <div class="card long">
+                    <h1>Hi!</h1>
+                </div>
             </div> */}
             {/* //TODO: Add return to top floating button */}
             {/* <Link to="/" id="return-to-top"></Link> */}

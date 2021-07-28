@@ -39,6 +39,7 @@ export default function Template({
                             <div className="post-meta">{frontmatter.date}</div>
                         </div>
                     )}
+                    <div></div>
                     <div
                         className="project-post-content"
                         dangerouslySetInnerHTML={{ __html: html }}

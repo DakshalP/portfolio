@@ -10,7 +10,7 @@ tagline: >-
 metaDescription: >-
     A small arduino music box placed inside a mint tin. Plays songs through a
     piezo buzzer, reminiscent of older video game music.
-thumbnail: /assets/ArduinoMusicBox.jpeg
+thumbnail: /assets/arduinoMusicBox.png
 ---
 
 Creating projects with Arduino is one of my favorite hobbies. I created the original Arduino music box 5 years ago. I have added features to it over the years, including a no-contact trigger for the box through an ultrasonic distance sensor.
