@@ -46,7 +46,6 @@ const ContactPage = ({ data: { site } }) => {
             <div className="two-grids -contact">
                 <div className="contact-header">
                     <img src="/assets/mail.svg" alt="" />
-                    <h1>Contact</h1>
                 </div>
                 <div>
                     <form
