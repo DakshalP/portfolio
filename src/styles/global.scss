@@ -1,41 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
 $font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 
 $main-text-color: #242424;
 
-$accent-1: #5393fe;
-$accent-2: hsl(12, 89%, 60%);
-$accent-3: hsl(115, 46%, 51%);
+//colorful
+// $accent-1: #5393fe;
+// $accent-2: hsl(12, 89%, 60%);
+// $accent-3: hsl(115, 46%, 51%);
 
-$main-border-radius: 3px;
+// forest
+// $accent-1: #4cb04c;
+// $accent-2: #eab374;
+// $accent-3: #56a6e3;
+
+//faded
+// $accent-1: #8b97b2;
+// $accent-3: #90b38c;
+// $accent-2: #9dbdb0;
+
+//muted original
+// $accent-1: #739fea;
+// $accent-2: hsl(12, 75%, 67%);
+// $accent-3: hsl(115, 46%, 58%);
+
+//brown
+// $accent-1: #A97142;
+// $accent-2: #B08D57;
+// $accent-3: #804A00;
+
+//green
+$accent-1: #609966;
+$accent-3: #93be7f;
+$accent-2: #88ae6a;
+
+$main-border-radius: 5px;
 
 $animate: all 0.2s ease-in-out;
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    color: $main-text-color;
-}
-* {
-    margin-top: 0;
-}
-::selection {
-    background: $accent-2;
-    color: white;
-}
+
+//modes
 body.light {
-    --primary-color: #5393fe;
+    --accent-1: #609966;
+    --primary-color: var(--accent-1);
     --primary-text-color: #fff;
-    --featured-bg: #5393fe;
+    --featured-bg: var(--accent-1);
     --featured-text: #fff;
     --sub-header: $main-text-color;
-    --secondary-color: #264272;
-    --background: white;
+    --secondary-color: #666769;
+    --background: #f0f1e6;
     --site-header: var(--background);
-    --card-bg: #fff;
+    --card-bg: rgb(252, 255, 247);
     // --card-bdr: #eee;
     // --card-shadow: #d5d5d5;
     --btn-bg: var(--background);
@@ -46,29 +62,47 @@ body.light {
     --contact-bg: #c9dbfa;
     // --contact-bdr: #d3d6e7;
     --input-bg: var(--background);
+    --form-background: #413f3f;
 }
 body.dark {
-    --primary-color: #5393fe;
+    --accent-1: #609966;
+    --primary-color: var(--accent-1);
     --primary-text-color: rgb(255, 255, 255);
-    --featured-bg: #5393fe;
+    --featured-bg: var(--accent-1);
     --featured-text: #fff;
     --sub-header: #8b8686;
-    --secondary-color: #7aabff;
-    --background: #29292a;
+    --secondary-color: #666769;
+    --background: #303330;
     --text-color: rgba(255, 255, 255, 0.88);
     --text-secondary-color: rgba(255, 255, 255, 0.66);
     --site-header: var(--background);
-    --card-bg: #353232;
+    --card-bg: #494545;
     // --card-bdr: #2f2f2f00;
     // --card-shadow: #1d1d1d;
     --btn-bg: var(--background);
-    // --btn-bdr: #d3d6e700;
+    --btn-bdr: #d3d6e700;
     --btn-text-color: #ffffff;
     --btn-hover-bg: var(--btn-bdr);
     --btn-hover-text-color: #00062b;
     --contact-bg: rgb(82, 81, 81);
     // --contact-bdr: var(--card-bg);
     --input-bg: var(--card-bg);
+    --form-background: #8e8e8e;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: $main-text-color;
+    font-size: 18px;
+}
+* {
+    margin-top: 0;
+}
+::selection {
+    background: $accent-2;
+    color: white;
 }
 body {
     font-family: $font-family;
@@ -79,6 +113,9 @@ body {
 a {
     color: var(--primary-color);
     text-decoration: none;
+}
+li {
+    margin-bottom: 5px;
 }
 .site-wrapper {
     padding: 32px;
@@ -126,6 +163,12 @@ a {
 .hero-header {
     max-width: 980px;
 }
+.page-header{ 
+    font-size: clamp(2em, 9vw, 3em);
+    font-weight: 900;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
 .headline {
     font-size: clamp(2.15em, 9vw, 3.5em);
     font-weight: 900;
@@ -168,8 +211,8 @@ a {
 #about-header {
     padding-top: 110px;
     padding-left: 2px;
-    font-size: 1.8em;
-    letter-spacing: 2px;
+    font-size: 1.9em;
+    font-weight: 900;
     color: var(--sub-header);
 }
 .posts-header {
@@ -254,6 +297,7 @@ a {
 }
 .dropdown-heading {
     #arrow {
+        margin-left: 10px;
         color: darkgray;
     }
 }
@@ -344,7 +388,6 @@ a {
 
 .card {
     color: $main-text-color;
-    display: grid;
     background-color: var(--card-bg);
     border-radius: 7px;
     // border: 1px solid var(--card-bdr);
@@ -355,11 +398,11 @@ a {
     overflow: hidden;
     line-height: 1.5;
     &:hover {
-        transition: transform 0.1s;
-        transform: scale(1.005);
+        // transition: transform 0.05s;
+        // transform: scale(1.005);
 
         .post-link {
-            transition: color 0.3s;
+            transition: color 0.05s;
             color: $accent-1;
         }
     }
@@ -380,19 +423,28 @@ a {
             filter: brightness(0.94);
         }
     }
-    > header {
-        padding: 24px;
+    .content {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
     }
     > #projects-header:first-child {
         margin: 0 0 0.5rem 0;
     }
     .post-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 900;
         margin-bottom: 10px;
     }
-    .post-tagline {
-        margin-bottom: 0;
+    .post-description {
+        margin: 10px 2px;
+        font-size: 16.5px;
+        font-weight: 400;
+        text-align: justify;
+        line-height: 1.45rem;
+
         min-height: 50px;
         color: var(--text-secondary-color);
     }
@@ -474,7 +526,7 @@ a {
 }
 .form-container {
     font-weight: 900;
-    background-color: $accent-1;
+    background-color: var(--form-background);
     padding: 32px;
     // border: 1px solid var(--contact-bdr);
     border-radius: $main-border-radius;

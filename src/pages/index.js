@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import PostLink from '../components/post-link';
-import HeroHeader from '../components/heroHeader';
-import MultiSelect from 'react-multi-select-component';
+import React, { useState } from "react";
+import Helmet from "react-helmet";
+import { graphql } from "gatsby";
+import Layout from "../components/layout";
+import PostLink from "../components/post-link";
+import HeroHeader from "../components/heroHeader";
+import MultiSelect from "react-multi-select-component";
 
 const IndexPage = ({
     data: {
@@ -15,11 +15,9 @@ const IndexPage = ({
     const [selectedTags, setSelectedTags] = useState([]);
 
     const tagOptions = [
-        { label: 'React', value: 'react' },
-        { label: 'Web (JS)', value: 'web' },
-        { label: 'Gatsby', value: 'gatsby' },
-        { label: 'SCSS', value: 'scss' },
-        { label: 'Arduino', value: 'arduino' },
+        { label: "React", value: "react" },
+        { label: "JavaScript", value: "javascript" },
+        { label: "Hobbies", value: "arduino" },
     ];
 
     const getPostsByTag = (tagObj) =>
@@ -52,8 +50,8 @@ const IndexPage = ({
                 <div className="grids">
                     {renderPosts(
                         getPostsByTag({
-                            label: 'Featured',
-                            value: 'featured',
+                            label: "Featured",
+                            value: "featured",
                         })
                     )}
                 </div>
@@ -68,23 +66,23 @@ const IndexPage = ({
             ? selected.map(({ label }) => (
                   <span className="tag-label">{label}</span>
               ))
-            : 'More...';
+            : "Filter all...";
     };
     const CustomItemRenderer = ({ checked, option, onClick, disabled }) => (
-        <div className={`item-renderer ${disabled && 'disabled'}`}>
+        <div className={`item-renderer ${disabled && "disabled"}`}>
             <input
                 type="checkbox"
                 onChange={onClick}
                 checked={checked}
                 tabIndex={-1}
                 disabled={disabled}
-                style={{ display: 'none' }}
+                style={{ display: "none" }}
             />
             <span>{option.label}</span>
         </div>
     );
     const Arrow = () => (
-        <span id="arrow">{selectedTags.length === 0 ? '▼' : ''}</span>
+        <span id="arrow">{selectedTags.length === 0 ? "▼" : ""}</span>
     );
 
     return (
@@ -98,7 +96,7 @@ const IndexPage = ({
             </Helmet>
             <HeroHeader />
             <h2 id="projects-header">
-                {selectedTags.length > 0 ? 'Projects' : 'Featured Projects'}
+                {selectedTags.length > 0 ? "Projects" : "Featured Projects"}
             </h2>
             <div className="tag-picker">
                 <MultiSelect
@@ -154,7 +152,7 @@ export const pageQuery = graphql`
                     id
                     excerpt(pruneLength: 250)
                     frontmatter {
-                        tagline
+                        description
                         path
                         title
                         thumbnail

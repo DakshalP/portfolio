@@ -1,7 +1,7 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { navigate, graphql } from 'gatsby';
-import Layout from '../components/layout';
+import React from "react";
+import Helmet from "react-helmet";
+import { navigate, graphql } from "gatsby";
+import Layout from "../components/layout";
 
 const ContactPage = ({ data: { site } }) => {
     function encode(data) {
@@ -9,10 +9,10 @@ const ContactPage = ({ data: { site } }) => {
             .map(
                 (key) =>
                     encodeURIComponent(key) +
-                    '=' +
+                    "=" +
                     encodeURIComponent(data[key])
             )
-            .join('&');
+            .join("&");
     }
 
     const handleSubmit = (event) => {
@@ -20,17 +20,17 @@ const ContactPage = ({ data: { site } }) => {
 
         const inputs = event.target.elements;
 
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
-                'form-name': event.target.getAttribute('name'),
-                name: inputs['name'].value,
-                email: inputs['email'].value,
-                message: inputs['message'].value,
+                "form-name": event.target.getAttribute("name"),
+                name: inputs["name"].value,
+                email: inputs["email"].value,
+                message: inputs["message"].value,
             }),
         })
-            .then(() => navigate('/send-success'))
+            .then(() => navigate("/send-success"))
             .catch((error) => alert(error));
     };
 
@@ -40,13 +40,30 @@ const ContactPage = ({ data: { site } }) => {
                 <title>Contact Me</title>
                 <meta
                     name="description"
-                    content={'Contact page of ' + site.siteMetadata.description}
+                    content={"Contact page of " + site.siteMetadata.description}
                 />
             </Helmet>
             <div className="two-grids -contact">
-                <div className="contact-header">
-                    <img src="/assets/mail.svg" alt="" />
-                </div>
+                <div className="page-header">Contact</div>
+                <p>Here are some ways to reach me</p>
+                <ul>
+                    <li>
+                        <strong>
+                            <a href="https://linkedin.com/in/dakshalp">
+                                linkedin.com/dakshalp
+                            </a>
+                        </strong>
+                    </li>
+                    <li>
+                        <p>
+                            <span style={{ fontFamily: "monospace" }}>
+                                contactdakshal
+                            </span>{" "}
+                            via Gmail.
+                        </p>
+                    </li>
+                    <li>The form below.</li>
+                </ul>
                 <div>
                     <form
                         name="contact"
@@ -57,7 +74,7 @@ const ContactPage = ({ data: { site } }) => {
                         onSubmit={handleSubmit}
                     >
                         <input type="hidden" name="form-name" value="contact" />
-                        <p style={{ position: 'absolute', opacity: '0%' }}>
+                        <p style={{ position: "absolute", opacity: "0%" }}>
                             <label>
                                 Don’t fill this out if you’re human (bot
                                 prevention field): <input name="bot-field" />
@@ -77,8 +94,8 @@ const ContactPage = ({ data: { site } }) => {
                         </div>
                         <div
                             style={{
-                                display: 'flex',
-                                justifyContent: 'flex-end',
+                                display: "flex",
+                                justifyContent: "flex-end",
                             }}
                         >
                             <button
@@ -86,8 +103,8 @@ const ContactPage = ({ data: { site } }) => {
                                 className="button -secondary"
                                 style={{
                                     marginRight: 0,
-                                    border: 'none',
-                                    cursor: 'pointer',
+                                    border: "none",
+                                    cursor: "pointer",
                                 }}
                             >
                                 Send

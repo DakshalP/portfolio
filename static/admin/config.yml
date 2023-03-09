@@ -2,11 +2,11 @@ backend:
     name: git-gateway
     branch: master
     commit_messages:
-        create: 'Create {{collection}} “{{slug}}”'
-        update: 'Update {{collection}} “{{slug}}”'
-        delete: 'Delete {{collection}} “{{slug}}”'
-        uploadMedia: '[skip ci] Upload “{{path}}”'
-        deleteMedia: '[skip ci] Delete “{{path}}”'
+        create: "Create {{collection}} “{{slug}}”"
+        update: "Update {{collection}} “{{slug}}”"
+        delete: "Delete {{collection}} “{{slug}}”"
+        uploadMedia: "[skip ci] Upload “{{path}}”"
+        deleteMedia: "[skip ci] Delete “{{path}}”"
 
 media_folder: static/assets
 public_folder: /assets
@@ -30,7 +30,7 @@ collections:
                 - widget: text
                   name: description
                   label: Description
-                  default: ''
+                  default: ""
                   required: false
                 - widget: object
                   name: home
@@ -39,17 +39,17 @@ collections:
                       - widget: string
                         name: title
                         label: Title
-                        default: ''
+                        default: ""
                         required: false
                       - widget: markdown
                         name: description
                         label: Description
-                        default: ''
+                        default: ""
                         required: false
     - name: project
       label: Project
       folder: _data/project
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       create: true
       fields:
           - {
@@ -62,15 +62,15 @@ collections:
             label: Path
             widget: string
             pattern: [/]
-            hint: 'Path must start with /'
+            hint: "Path must start with /"
           - { name: date, label: Date, widget: datetime }
           - { name: title, label: Title }
           - name: tags
             label: Tags
             widget: text
             required: false
-          - label: Tagline
-            name: tagline
+          - label: Description
+            name: description
             widget: text
             required: true
           - label: Meta Description
@@ -80,7 +80,7 @@ collections:
           - label: Featured Image
             name: thumbnail
             widget: image
-            hint: 'Image size 1280x800 works best :)'
+            hint: "Image size 1280x800 works best :)"
             required: false
             media_library:
                 config:

@@ -6,7 +6,7 @@
 
 module.exports = {
     /* Your site config here */
-    siteMetadata: require('./site-meta-data.json'),
+    siteMetadata: require("./site-meta-data.json"),
     plugins: [
         {
             resolve: `gatsby-source-filesystem`,
@@ -22,7 +22,7 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-prismjs`,
                         options: {
-                            classPrefix: 'language-',
+                            classPrefix: "language-",
                             inlineCodeMarker: null,
                             aliases: {},
                             showLineNumbers: false,
@@ -30,7 +30,7 @@ module.exports = {
                         },
                     },
                     {
-                        resolve: 'gatsby-remark-emojis',
+                        resolve: "gatsby-remark-emojis",
                     },
                 ],
             },
@@ -39,7 +39,7 @@ module.exports = {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
                 // The property ID; the tracking code won't be generated without it. replace with yours
-                trackingId: '',
+                trackingId: "",
                 head: true,
             },
         },
@@ -52,7 +52,7 @@ module.exports = {
                 background_color: `#fff`,
                 theme_color: `#5393fe`,
                 display: `standalone`,
-                icon: 'src/images/icon.png',
+                icon: "src/images/icon.png",
             },
         },
         `gatsby-plugin-sass`,
@@ -63,7 +63,7 @@ module.exports = {
                 enableIdentityWidget: true,
             },
         },
-        'gatsby-plugin-dark-mode',
+        "gatsby-plugin-dark-mode",
         // siteURL is a must for sitemap generation
         `gatsby-plugin-sitemap`,
         `gatsby-plugin-offline`,

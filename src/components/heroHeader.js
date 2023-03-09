@@ -1,5 +1,5 @@
-import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import React from "react";
+import { StaticQuery, graphql, Link } from "gatsby";
 export default () => (
     <StaticQuery
         query={graphql`
@@ -17,18 +17,18 @@ export default () => (
         render={(data) => (
             <div className="hero-header">
                 <div className="headline">
-                    Hello! I'm{' '}
-                    <Link id="name" to="https://www.linkedin.com/in/dakshalp/">
-                        Dakshal Panicker
+                    Hello! I'm{" "}
+                    <Link id="name" to="/about">
+                        Dakshal
                     </Link>
-                    . Here you can browse some of my{' '}
+                    . Feel free to browse some of my{" "}
                     <Link id="projects" to="/#projects-header">
                         projects
-                    </Link>{' '}
-                    or write a{' '}
+                    </Link>{" "}
+                    or write a{" "}
                     <Link to="/contact" id="contact">
                         message
-                    </Link>{' '}
+                    </Link>{" "}
                     to me.
                 </div>
                 <div
@@ -44,15 +44,15 @@ export default () => (
                     href="https://www.linkedin.com/in/dakshalp/"
                     className="button -primary"
                 >
-                    {' '}
-                    LinkedIn{' '}
+                    {" "}
+                    LinkedIn{" "}
                 </a>
                 <a
                     href="https://github.com/DakshalP"
                     className="button -primary"
                 >
-                    {' '}
-                    Github{' '}
+                    {" "}
+                    Github{" "}
                 </a>
             </div>
         )}
