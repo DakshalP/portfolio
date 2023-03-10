@@ -48,19 +48,19 @@ const ContactPage = ({ data: { site } }) => {
                 <p>Here are some ways to reach me</p>
                 <ul>
                     <li>
-                        <strong>
-                            <a href="https://linkedin.com/in/dakshalp">
-                                linkedin.com/dakshalp
-                            </a>
-                        </strong>
-                    </li>
-                    <li>
                         <p>
                             <span style={{ fontFamily: "monospace" }}>
                                 contactdakshal
                             </span>{" "}
                             via Gmail.
                         </p>
+                    </li>
+                    <li>
+                        <strong>
+                            <a href="https://linkedin.com/in/dakshalp">
+                                linkedin.com/dakshalp
+                            </a>
+                        </strong>
                     </li>
                     <li>The form below.</li>
                 </ul>

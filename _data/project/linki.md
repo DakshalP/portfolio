@@ -22,3 +22,14 @@ Linki is a React based web app that uses a local, encrypted IndexedDB to store o
 ## Site Page
 
 Try it out at [linki.netlify.app](https://linki.netlify.app)
+
+## Gallery
+
+![Vault Generation](/assets/linki3.png)
+This page asks the user to create a secure passkey that will be used to encrypt their data locally. Provides protection for meeting passcodes.
+
+![Edit Meeting Form](/assets/linki4b.png)
+This is the form to add and update meetings.
+
+![Dashboard](/assets/linki5.png)
+This is the dashboard where you can see upcoming meetings, their passwords, and also click to launch them.

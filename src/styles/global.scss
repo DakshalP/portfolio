@@ -35,7 +35,10 @@ $accent-1: #609966;
 $accent-3: #93be7f;
 $accent-2: #88ae6a;
 
-$main-border-radius: 5px;
+$accent-1-dark: darken($accent-1, 20%);
+$post-thumbnail-background: rgba($accent-1-dark, 0.8);
+
+$main-border-radius: 6px;
 
 $animate: all 0.2s ease-in-out;
 
@@ -315,8 +318,10 @@ li {
 }
 .post {
     padding: 0;
-    background: var(--background);
+    background: var(--card-bg);
     color: var(--text-color);
+    border-bottom-left-radius: $main-border-radius;
+    border-bottom-right-radius: $main-border-radius;
     line-height: 1.5;
 
     a {
@@ -325,7 +330,13 @@ li {
             text-decoration: underline 2px;
         }
     }
+    img {
+        margin-top: 50px;
+        background-color: var(--background);
+        padding: 10px;
+    }
     > .project-post-content {
+        padding: 20px 0 80px 0;
         max-width: 768px;
         margin: 0 auto;
         text-align: justify;
@@ -352,7 +363,8 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: $main-border-radius;
+    border-top-left-radius: $main-border-radius;
+    border-top-right-radius: $main-border-radius;
     margin-bottom: 36px;
     color: var(--featured-text);
     display: grid;
@@ -362,7 +374,7 @@ li {
     overflow: hidden;
     &:before {
         content: '';
-        background: rgba(0, 0, 0, 0.4);
+        background: $post-thumbnail-background;
         position: absolute;
         top: 0;
         left: 0;

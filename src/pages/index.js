@@ -17,7 +17,9 @@ const IndexPage = ({
     const tagOptions = [
         { label: "React", value: "react" },
         { label: "JavaScript", value: "javascript" },
-        { label: "Hobbies", value: "arduino" },
+        { label: "Node JS", value: "nodejs" },
+        { label: "MySQL", value: "mysql" },
+        // { label: "Hobbies", value: "arduino" },
     ];
 
     const getPostsByTag = (tagObj) =>
@@ -96,7 +98,7 @@ const IndexPage = ({
             </Helmet>
             <HeroHeader />
             <h2 id="projects-header">
-                {selectedTags.length > 0 ? "Projects" : "Featured Projects"}
+                {selectedTags.length > 0 ? "Filtered Projects" : "Projects"}
             </h2>
             <div className="tag-picker">
                 <MultiSelect
