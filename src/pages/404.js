@@ -20,8 +20,7 @@ const notFound = () => {
                 <strong>This page doesn't exist.</strong>
                 <img src={"/assets/forest.svg"} alt="Forest" />
                 <strong>
-                    Lost in the forest? Let's get back <Link to="/">home</Link>{" "}
-                    safely.
+                    Lost in the forest? Navigate back <Link to="/">home</Link> .
                 </strong>
             </div>
         </Layout>

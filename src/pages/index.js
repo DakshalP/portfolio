@@ -16,10 +16,11 @@ const IndexPage = ({
 
     const tagOptions = [
         { label: "React", value: "react" },
-        { label: "JavaScript", value: "javascript" },
         { label: "Node JS", value: "nodejs" },
         { label: "MySQL", value: "mysql" },
-        // { label: "Hobbies", value: "arduino" },
+        { label: "GraphQL", value: "graphql" },
+        { label: "SCSS/Sass", value: "scss" },
+        { label: "Tailwind CSS", value: "tailwind" },
     ];
 
     const getPostsByTag = (tagObj) =>
@@ -28,6 +29,16 @@ const IndexPage = ({
             .filter((edge) =>
                 edge.node.frontmatter.tags.includes(tagObj.value)
             );
+
+    const getPostsByTags = (tagObjArr) =>
+        edges
+            .filter((edge) => !!edge.node.frontmatter.tags)
+            .filter((edge) => {
+                for (let tag of tagObjArr.map((x) => x.value)) {
+                    if (!edge.node.frontmatter.tags.includes(tag)) return false;
+                }
+                return true;
+            });
 
     const renderPosts = (edges) =>
         edges.map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
@@ -39,12 +50,21 @@ const IndexPage = ({
     //based on tag
     if (selectedTags.length > 0) {
         let taggedPosts = [];
-        for (let tag of selectedTags)
-            taggedPosts = taggedPosts.concat(getPostsByTag(tag));
+        // for (let tag of selectedTags)
+        //     taggedPosts = taggedPosts.concat(getPostsByTag(tag));
+        taggedPosts = taggedPosts.concat(getPostsByTags(selectedTags));
         //remove duplicates from multiple tags
-        taggedPosts = [...new Set(taggedPosts)];
+        // taggedPosts = [...new Set(taggedPosts)];
 
-        Posts = <div className="grids">{renderPosts(taggedPosts)}</div>;
+        if (taggedPosts.length > 0)
+            Posts = <div className="grids">{renderPosts(taggedPosts)}</div>;
+        else
+            Posts = (
+                <p className="warn-empty">
+                    No posts contain this combination of tags. Try selecting
+                    different tags above.
+                </p>
+            );
     } else {
         // no tag selected
         Posts = (
