@@ -131,7 +131,7 @@ ul, ol {
     }
 }
 .site-wrapper {
-    padding: 32px;
+    padding: 24px;
     max-width: 1140px;
     margin: 0 auto;
     img {
@@ -331,7 +331,6 @@ ul, ol {
 }
 .post {
     font-size: 15px;
-    padding: 0;
     background: var(--card-bg);
     color: var(--text-color);
     border-bottom-left-radius: $main-border-radius;
@@ -350,10 +349,10 @@ ul, ol {
         padding: 10px;
     }
     > .project-post-content {
-        padding: 20px 0 80px 0;
+        padding: 20px 40px 80px 40px;
         max-width: 768px;
         margin: 0 auto;
-        text-align: justify;
+        // text-align: justify;
     }
     // > .project-post-content *:last-child,
     // > *:last-child {
