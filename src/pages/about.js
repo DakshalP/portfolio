@@ -2,6 +2,19 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
+// import {
+//     SiJavascript,
+//     SiReact,
+//     SiSass,
+//     SiTailwindcss,
+//     SiGraphql,
+//     SiHeroku,
+//     SiNetlify,
+//     SiPython,
+//     SiNodedotjs,
+//     SiMysql,
+//     SiMongodb,
+// } from "react-icons/si";
 
 const AboutPage = ({ data: { site } }) => (
     <Layout>
@@ -36,6 +49,22 @@ const AboutPage = ({ data: { site } }) => (
                         coding skill to small hardware projects using Arduino.
                     </li>
                 </ul>
+                {/* <p>Here are some of the technolgies I've used:</p>
+                <h2>Frontend</h2>
+                <div className="icons">
+                    <SiJavascript />
+                    <SiReact />
+                    <SiSass />
+                    <SiTailwindcss />
+                    <SiGraphql />
+                </div>
+                <h2>Backend</h2>
+                <div className="icons">
+                    <SiPython />
+                    <SiNodedotjs />
+                    <SiMysql />
+                    <SiMongodb />
+                </div> */}
             </div>
         </div>
     </Layout>

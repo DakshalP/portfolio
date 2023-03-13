@@ -129,6 +129,10 @@ ul, ol {
     li {
         margin-bottom: 20px;
     }
+    h2 {
+        margin: 40px;
+        text-align: center;
+    }
 }
 .site-wrapper {
     padding: 24px;
@@ -272,6 +276,15 @@ ul, ol {
     &:hover {
         background-color: var(--btn-hover-bg);
         color: var(--btn-hover-text-color);
+    }
+}
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+
+    >svg {
+        width: 3em;
+        height: 3em;
     }
 }
 .tag-picker {
