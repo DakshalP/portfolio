@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import PostLink from "../components/post-link";
 import HeroHeader from "../components/heroHeader";
 import MultiSelect from "react-multi-select-component";
+import { BsQuestionDiamond } from "react-icons/bs";
 
 const IndexPage = ({
     data: {
@@ -61,8 +62,9 @@ const IndexPage = ({
         else
             Posts = (
                 <p className="warn-empty">
-                    No posts contain this combination of tags. Try selecting
-                    different tags above.
+                    <BsQuestionDiamond class="large icon" />
+                    No projects have this tech stack. Try adjusting the tags
+                    above.
                 </p>
             );
     } else {
@@ -88,7 +90,7 @@ const IndexPage = ({
             ? selected.map(({ label }) => (
                   <span className="tag-label">{label}</span>
               ))
-            : "Filter all...";
+            : "Filter by tech stack...";
     };
     const CustomItemRenderer = ({ checked, option, onClick, disabled }) => (
         <div className={`item-renderer ${disabled && "disabled"}`}>
