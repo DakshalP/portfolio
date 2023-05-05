@@ -141,20 +141,6 @@ const IndexPage = ({
                 />
             </div>
             {Posts}
-            {/* //TODO: Add about section */}
-            {/* <h2 id="about-header">About</h2>
-            <div className="grids">
-                <img
-                    class="card"
-                    src="/assets/me.png"
-                    alt="Dakshal as a drawing"
-                />
-                <div class="card long">
-                    <h1>Hi!</h1>
-                </div>
-            </div> */}
-            {/* //TODO: Add return to top floating button */}
-            {/* <Link to="/" id="return-to-top"></Link> */}
         </Layout>
     );
 };

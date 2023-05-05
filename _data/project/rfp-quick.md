@@ -5,7 +5,7 @@ date: 2022-12-31
 title: rfpQuick
 tags: "featured, javascript, react, nodejs, mysql, tailwind"
 description: >-
-    This document generation tool enables the creation of business proposals in a standard format. I contributed to the frontend, implementing features such as account creation, login, API connection, autosave integration, and PDF generation using React.
+    This tool generates formatted business proposals. I contributed extensively to the frontend, implementing account creation, login with <strong>Firebase</strong>, connection to a <strong>Node.js</strong> REST API, autosave integration, PDF generation, and multiple UI components in <strong>React</strong>.
 metaDescription: >-
     RFP Document Generation Tool
 thumbnail: /assets/rfpQuick1laptop.png
@@ -31,6 +31,7 @@ My contributions include:
 
 -   React
 -   Node JS
+-   Firebase
 -   MySQL
 -   Formik
 -   Tailwind CSS

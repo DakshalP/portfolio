@@ -26,9 +26,12 @@ const PostLink = ({ post }) => (
                         {post.frontmatter.title}
                     </Link>
                 </h3>
-                <div className="post-description">
-                    {post.frontmatter.description}
-                </div>
+                <div
+                    className="post-description"
+                    dangerouslySetInnerHTML={{
+                        __html: post.frontmatter.description,
+                    }}
+                ></div>
             </div>
 
             {/* <div className="post-tags">
