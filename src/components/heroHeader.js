@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
+import { BsLinkedin, BsGithub } from "react-icons/bs";
 export default () => (
     <StaticQuery
         query={graphql`
@@ -42,16 +43,18 @@ export default () => (
                 </Link>
                 <a
                     href="https://www.linkedin.com/in/dakshalp/"
-                    className="button -primary"
+                    className="button -primary linkedin"
                 >
                     {" "}
+                    <BsLinkedin className="icon" />
                     LinkedIn{" "}
                 </a>
                 <a
                     href="https://github.com/DakshalP"
-                    className="button -primary"
+                    className="button -primary github"
                 >
                     {" "}
+                    <BsGithub className="icon" />
                     Github{" "}
                 </a>
             </div>
