@@ -323,10 +323,14 @@ ul, ol {
     #clear {
         color: $accent-1;
         font-style: normal;
-        font-size: 20px;
+        font-size: 30px;
         margin-left: 25px;
         margin-right: 5px;
-        transform: translateX(-5px) translateY(-2px) scale(1.2);
+        margin-bottom: -5px;
+
+        &:hover {
+            color: var(--secondary-color);
+        }
     }
 }
 .tag-label {

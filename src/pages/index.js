@@ -6,6 +6,7 @@ import PostLink from "../components/post-link";
 import HeroHeader from "../components/heroHeader";
 import MultiSelect from "react-multi-select-component";
 import { BsQuestionDiamond } from "react-icons/bs";
+import { VscDebugRestart } from "react-icons/vsc";
 
 const IndexPage = ({
     data: {
@@ -63,7 +64,7 @@ const IndexPage = ({
             Posts = (
                 <p className="warn-empty">
                     <BsQuestionDiamond class="large icon" />
-                    No projects have this tech stack. Try adjusting the tags
+                    No projects have this tech stack. Try selecting new tags
                     above.
                 </p>
             );
@@ -136,7 +137,11 @@ const IndexPage = ({
                     //     selectAll: 'All',
                     // }}
 
-                    ClearSelectedIcon={<i id="clear">✖</i>}
+                    ClearSelectedIcon={
+                        <i id="clear">
+                            <VscDebugRestart />
+                        </i>
+                    }
                     ArrowRenderer={Arrow}
                     ItemRenderer={CustomItemRenderer}
                     valueRenderer={customValueRenderer}
