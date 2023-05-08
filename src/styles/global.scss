@@ -253,8 +253,8 @@ ul, ol {
     transition: background-color 0.2s;
     &.-primary {
         background-color: var(--primary-color);
-        border-color: var(--primary-color);
-        border: 2px solid;
+        // border-color: var(--primary-color);
+        // border: 2px solid;
         color: var(--primary-text-color);
         &:hover {
             background-color: var(--secondary-color);
@@ -344,7 +344,7 @@ ul, ol {
     --rmsc-main: var(--primary-color) !important;
     --rmsc-hover: lightgray !important;
     --rmsc-selected: #e2e6ea;
-    --rmsc-border: lightgray !important;
+    --rmsc-border: darkgray !important;
     --rmsc-gray: #aaa;
     --rmsc-bg: var(--background) !important;
     --rmsc-p: 15px !important; /* Spacing */
