@@ -21,6 +21,7 @@ const IndexPage = ({
         { label: "Node JS", value: "nodejs" },
         { label: "MySQL", value: "mysql" },
         { label: "GraphQL", value: "graphql" },
+        { label: "Firebase", value: "firebase" },
         { label: "SCSS/Sass", value: "scss" },
         { label: "Tailwind CSS", value: "tailwind" },
     ];

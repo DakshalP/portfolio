@@ -3,7 +3,7 @@ template: ProjectPost
 path: /project/rfp-quick
 date: 2022-12-31
 title: rfpQuick
-tags: "featured, javascript, react, nodejs, mysql, tailwind"
+tags: "featured, javascript, react, nodejs, mysql, firebase, tailwind"
 description: >-
     This tool generates formatted business proposals. I contributed extensively to the frontend, implementing account creation, login with <strong>Firebase</strong>, connection to a <strong>Node.js</strong> REST API, autosave integration, PDF generation, and multiple UI components in <strong>React</strong>.
 metaDescription: >-
