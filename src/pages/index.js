@@ -64,8 +64,33 @@ const IndexPage = ({
             Posts = (
                 <p className="warn-empty">
                     <BsQuestionDiamond class="large icon" />
-                    No projects have this tech stack. Try selecting new tags
-                    above.
+                    No projects have this tech stack. Try these suggestions:
+                    <div>
+                        <button
+                            className="button -secondary"
+                            onClick={() =>
+                                setSelectedTags([
+                                    { label: "React", value: "react" },
+                                    { label: "Node JS", value: "nodejs" },
+                                    { label: "MySQL", value: "mysql" },
+                                ])
+                            }
+                        >
+                            React | Node.js | MySQL
+                        </button>
+                        <button
+                            className="button -secondary"
+                            onClick={() =>
+                                setSelectedTags([
+                                    { label: "React", value: "react" },
+                                    { label: "GraphQL", value: "graphql" },
+                                    { label: "SCSS/Sass", value: "scss" },
+                                ])
+                            }
+                        >
+                            React | GraphQL | SCSS
+                        </button>
+                    </div>
                 </p>
             );
     } else {
