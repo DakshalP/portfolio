@@ -14,6 +14,13 @@ import Layout from "../components/layout";
 //     SiNodedotjs,
 //     SiMysql,
 //     SiMongodb,
+//     SiFirebase,
+//     SiGatsby,
+//     SiOcaml,
+//     SiPandas,
+//     SiNumpy,
+//     SiR,
+//     SiTensorflow,
 // } from "react-icons/si";
 
 const AboutPage = ({ data: { site } }) => (
@@ -49,7 +56,9 @@ const AboutPage = ({ data: { site } }) => (
                         coding skill to small hardware projects using Arduino.
                     </li>
                 </ul>
-                {/* <p>Here are some of the technolgies I've used:</p>
+                {/* <br />
+                <br />
+                <br />
                 <h2>Frontend</h2>
                 <div className="icons">
                     <SiJavascript />
@@ -57,13 +66,24 @@ const AboutPage = ({ data: { site } }) => (
                     <SiSass />
                     <SiTailwindcss />
                     <SiGraphql />
+                    <SiGatsby />
                 </div>
                 <h2>Backend</h2>
                 <div className="icons">
-                    <SiPython />
                     <SiNodedotjs />
                     <SiMysql />
                     <SiMongodb />
+                    <SiFirebase />
+                    <SiNetlify />
+                    <SiHeroku />
+                    <SiOcaml />
+                </div>
+                <h2>Data Science</h2>
+                <div className="icons">
+                    <SiPython />
+                    <SiPandas />
+                    <SiNumpy />
+                    <SiR />
                 </div> */}
             </div>
         </div>
