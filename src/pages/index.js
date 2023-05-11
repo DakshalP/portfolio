@@ -43,8 +43,14 @@ const IndexPage = ({
                 return true;
             });
 
-    const renderPosts = (edges) =>
-        edges.map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
+    const renderPosts = (edges, displayIcons) =>
+        edges.map((edge) => (
+            <PostLink
+                key={edge.node.id}
+                post={edge.node}
+                displayIcons={displayIcons}
+            />
+        ));
 
     /* Fetch Posts */
 
@@ -60,7 +66,9 @@ const IndexPage = ({
         // taggedPosts = [...new Set(taggedPosts)];
 
         if (taggedPosts.length > 0)
-            Posts = <div className="grids">{renderPosts(taggedPosts)}</div>;
+            Posts = (
+                <div className="grids">{renderPosts(taggedPosts, true)}</div>
+            );
         else
             Posts = (
                 <p className="warn-empty">
@@ -103,7 +111,8 @@ const IndexPage = ({
                         getPostsByTag({
                             label: "Featured",
                             value: "featured",
-                        })
+                        }),
+                        false
                     )}
                 </div>
             </>

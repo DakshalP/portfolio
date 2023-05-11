@@ -3,7 +3,7 @@ template: ProjectPost
 path: /project/linki
 date: 2020-02-20T07:08:53.137Z
 title: Linki
-tags: "featured, javascript, react"
+tags: "featured, javascript, react, idb"
 description: "An easy way to store online meeting links. Linki uses a local, <strong>encrypted IndexedDB</strong> to store online meeting links and their passwords. I created it with <strong>React</strong> to solve the problem of having too many Zoom links to keep track of after all my classes went online."
 
 metaDescription: A project using create-react-app to make a way to store online meeting links

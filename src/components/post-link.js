@@ -1,7 +1,29 @@
 import React from "react";
 import { Link } from "gatsby";
+import {
+    SiFirebase,
+    SiGraphql,
+    SiHtml5,
+    SiMysql,
+    SiNodedotjs,
+    SiReact,
+    SiSass,
+    SiTailwindcss,
+} from "react-icons/si";
+import { BsDatabaseLock } from "react-icons/bs";
 
-const PostLink = ({ post }) => (
+const tagIcons = {
+    react: <SiReact />,
+    nodejs: <SiNodedotjs />,
+    mysql: <SiMysql />,
+    graphql: <SiGraphql />,
+    firebase: <SiFirebase />,
+    scss: <SiSass />,
+    tailwind: <SiTailwindcss />,
+    idb: <BsDatabaseLock />,
+};
+
+const PostLink = ({ post, displayIcons }) => (
     <article className="card ">
         <Link to={post.frontmatter.path}>
             {!!post.frontmatter.thumbnail && (
@@ -32,20 +54,12 @@ const PostLink = ({ post }) => (
                         __html: post.frontmatter.description,
                     }}
                 ></div>
+                <div className={displayIcons ? "post-icons" : "display-none"}>
+                    {post.frontmatter.tags
+                        .split(",")
+                        .map((tag) => tagIcons[tag.trim()])}
+                </div>
             </div>
-
-            {/* <div className="post-tags">
-                {post.frontmatter.tags
-                    ? post.frontmatter.tags
-                          .split(",")
-                          .filter((tag) => tag !== "featured")
-                          .map((tag) => (
-                              <span className="post-tag" key={tag}>
-                                  {tag}
-                              </span>
-                          ))
-                    : null}
-            </div> */}
         </div>
     </article>
 );

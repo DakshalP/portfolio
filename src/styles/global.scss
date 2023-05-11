@@ -125,6 +125,9 @@ ul, ol {
         font-weight: bold
     }
 }
+.display-none {
+    display: none;
+}
 .about-section {
     li {
         margin-bottom: 20px;
@@ -298,13 +301,16 @@ ul, ol {
 }
 .icons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 
     >svg {
         width: 3em;
         height: 3em;
     }
 }
+
 .large.icon {
     display: block;
     height: 3em;
@@ -530,6 +536,16 @@ ul, ol {
         &:hover {
             transition: 2s all;
             transform: scale(1.2);
+        }
+    }
+    .post-icons {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 5px;
+        margin-top: 30px;
+        >svg {
+            width: 1.8em;
+            height: 1.8em;
         }
     }
     .post-tags {
