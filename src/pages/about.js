@@ -93,32 +93,32 @@ const AboutPage = ({ data: { site } }) => (
                 </div> */}
             </div>
             <div className="image-container">
-                <h2>My Photography</h2>
+                <h2>Photography</h2>
                 <ul className="gallery">
-                    <li>
-                        <img src="/assets/nature_photos/1.jpg" alt="" />
-                        <div class="overlay">
-                            <span>Image title</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="/assets/nature_photos/2.jpg" alt="" />
-                        <div class="overlay">
-                            <span>Image title</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="/assets/nature_photos/3.jpg" alt="" />
-                        <div class="overlay">
-                            <span>Image title</span>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="/assets/nature_photos/4.jpeg" alt="" />
-                        <div class="overlay">
-                            <span>Image title</span>
-                        </div>
-                    </li>
+                    {[
+                        "niagra_river",
+                        "beach_rocks",
+                        "sailboat",
+                        "beach_sunset",
+                        "niagra_falls",
+                        "snow",
+                        "mushroom",
+                        "sand",
+                        "rapids",
+                        "cliff",
+                        "mountain_top",
+                    ].map((filename) => (
+                        <li>
+                            <img
+                                key={filename}
+                                src={`/assets/nature_photos/${filename}.jpg`}
+                                alt={filename}
+                            />
+                            <div class="overlay">
+                                <span>{filename.replace("_", " ")}</span>
+                            </div>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>
