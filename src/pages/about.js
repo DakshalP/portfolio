@@ -54,6 +54,9 @@ const AboutPage = ({ data: { site } }) => (
                     <li>
                         My hobbies include hiking, reading, and applying my
                         coding skill to small hardware projects using Arduino.
+                        <br />
+                        <br />I also like nature photography. You can see some
+                        of the photos I took below.
                     </li>
                 </ul>
                 {/* <br />
@@ -85,7 +88,44 @@ const AboutPage = ({ data: { site } }) => (
                     <SiNumpy />
                     <SiR />
                 </div> */}
+
+                {/* image gallery */}
             </div>
+        </div>
+        <div className="image-container">
+            <h2>Work in progress gallery</h2>
+            <ul className="gallery">
+                <li>
+                    <img src="https://source.unsplash.com/VWcPlbHglYc" alt="" />
+                    <div class="overlay">
+                        <span>Image title</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://source.unsplash.com/e6FMMambeO4" alt="" />
+                    <div class="overlay">
+                        <span>Image title</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://source.unsplash.com/klCiPmzUw0Y" alt="" />
+                    <div class="overlay">
+                        <span>Image title</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://source.unsplash.com/IdNOTjPeHrE" alt="" />
+                    <div class="overlay">
+                        <span>Image title</span>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://source.unsplash.com/O0N9MF--hK4" alt="" />
+                    <div class="overlay">
+                        <span>Image title</span>
+                    </div>
+                </li>
+            </ul>
         </div>
     </Layout>
 );
