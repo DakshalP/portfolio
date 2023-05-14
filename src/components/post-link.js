@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import {
     SiFirebase,
     SiGraphql,
-    SiHtml5,
     SiMysql,
     SiNodedotjs,
     SiReact,
