@@ -93,7 +93,7 @@ const AboutPage = ({ data: { site } }) => (
                 </div> */}
             </div>
             <div className="image-container">
-                <h2>Photography</h2>
+                <h2>My Photography</h2>
                 <ul className="gallery">
                     {[
                         "niagra_river",

@@ -787,6 +787,7 @@ body.light {
         height: 100%;
         vertical-align: middle;
         border-radius: 5px;
+        pointer-events: none;
     }
     li:hover .overlay {
         transform: scale(1);
