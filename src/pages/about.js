@@ -35,27 +35,33 @@ const AboutPage = ({ data: { site } }) => (
         <div className="two-grids -contact">
             <div className="about-section">
                 <div className="page-header">About</div>
-                <p>Hi! I'm Dakshal Panicker. Here's a bit about me:</p>
-                <ul>
-                    <li>
-                        I'm a full stack developer with experience in using{" "}
-                        <strong>Javascript</strong> on the frontend and backend.
-                        You can see some examples of my projects on the{" "}
-                        <Link to="/">homepage</Link>.
-                    </li>
-                    <li>
-                        I'm a student at{" "}
-                        <strong>Rutgers University New Brunswick</strong>.
-                    </li>
-                    <li>
-                        I'm majoring in <strong>Computer Science</strong> and
-                        minoring in <strong>Data Science</strong>.
-                    </li>
-                    <li>
-                        My hobbies include hiking, reading, and applying my
-                        coding skill to small hardware projects using Arduino.
-                    </li>
-                </ul>
+                <div className="about-text">
+                    <p>Hi! I'm Dakshal Panicker. Here's a bit about me:</p>
+                    <ul>
+                        <li>
+                            I'm a full stack developer with experience in using{" "}
+                            <strong>Javascript</strong> on the frontend and
+                            backend. You can see some of my projects on the{" "}
+                            <Link to="/">homepage</Link>.
+                        </li>
+                        <li>
+                            I'm a student at{" "}
+                            <strong>Rutgers University New Brunswick</strong>.
+                        </li>
+                        <li>
+                            I'm majoring in <strong>Computer Science</strong>{" "}
+                            and minoring in <strong>Data Science</strong>.
+                        </li>
+                        <li>
+                            My hobbies include hiking, reading, and applying my
+                            coding skill to small hardware projects using
+                            Arduino.
+                            <br />
+                            <br />I also like nature photography. You can see
+                            some of the photos I took below.
+                        </li>
+                    </ul>
+                </div>
                 {/* <br />
                 <br />
                 <br />
@@ -85,6 +91,35 @@ const AboutPage = ({ data: { site } }) => (
                     <SiNumpy />
                     <SiR />
                 </div> */}
+            </div>
+            <div className="image-container">
+                <h2>My Photography</h2>
+                <ul className="gallery">
+                    {[
+                        "niagra_river",
+                        "beach_rocks",
+                        "sailboat",
+                        "beach_sunset",
+                        "niagra_falls",
+                        "snow",
+                        "mushroom",
+                        "sand",
+                        "rapids",
+                        "cliff",
+                        "mountain_top",
+                    ].map((filename) => (
+                        <li>
+                            <img
+                                key={filename}
+                                src={`/assets/nature_photos/${filename}.jpg`}
+                                alt={filename}
+                            />
+                            <div class="overlay">
+                                <span>{filename.replace("_", " ")}</span>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     </Layout>

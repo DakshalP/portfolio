@@ -136,6 +136,11 @@ ul, ol {
         margin: 40px;
         text-align: center;
     }
+    .about-text {
+        background-color: var(--card-bg);
+        padding: 40px;
+        border-radius: 5px;
+    }
 }
 .site-wrapper {
     padding: 24px;
@@ -755,3 +760,62 @@ body.light {
     top: 8px;
     left: 2px;
 }
+.image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    // h2{ 
+    //     text-align: center;
+    // }
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0px;
+    >li {
+        height: 300px;
+        cursor: pointer;
+        position: relative;
+        flex: 1 1 auto;
+    }
+    li img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        border-radius: 5px;
+        pointer-events: none;
+    }
+    li:hover .overlay {
+        transform: scale(1);
+        opacity: 100%;
+      }      
+    ::after {
+        content: "";
+        flex-grow: 999;
+    }
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 41, 41, 0.502);
+    top: 0;
+    left: 0;
+    transform: scale(0.85);
+    opacity: 0%;
+    transition: all 0.2s 0.3s ease-in-out;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    /* center overlay text */
+    display: flex;
+    align-items: center;
+    span {
+        text-align: center;
+        width: 100%;
+    }
+  }
