@@ -1,4 +1,4 @@
-# https://dakshal.netlify.app
+# https://dakshal.com
 
 A portfolio website to showcase my work! Check it out at the above link.
 
