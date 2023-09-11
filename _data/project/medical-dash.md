@@ -2,16 +2,16 @@
 template: ProjectPost
 path: /project/highspot-dashboard
 date: 2022-05-25
-title: Medical Dashboard
+title: Device Dashboard
 tags: "featured, javascript, react, nodejs, mysql, tailwind"
-description: "This product dashboard interfaces with a <strong>MySQL</strong> database of hundreds of medical devices, with sorting and searching capbilities. This was a fullstack project with a <strong>Node.js</strong> backend. Created for a national healthcare corporation as part of my internship."
+description: "This product dashboard interfaces with a <strong>SQL</strong> database of hundreds of medical devices, with sorting and searching capbilities. This was a fullstack project with a <strong>Node.js</strong> backend. Created for a medical technology corporation as part of my internship."
 metaDescription: "Internal medical product dashboard"
 thumbnail: /assets/dash1laptop.png
 ---
 
 ## Introduction
 
-This product dashboard interfaces with a database of hundreds of medical devices. It contains sorting, searching, editing, and export capabliites. Created to help with internal database management for a healthcare corporation.
+This product dashboard interfaces with a database of hundreds of medical devices. It contains sorting, searching, editing, and export capabilites. Created to help with  database management for a medical technology corporation.
 
 # Built With
 

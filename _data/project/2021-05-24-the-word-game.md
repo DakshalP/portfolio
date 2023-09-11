@@ -2,7 +2,7 @@
 template: ProjectPost
 path: /project/the-word-game
 date: 2020-01-01T14:48:39.520Z
-title: The Word Game
+title: Word!
 tags: "featured, javascript"
 description: "A live multiplayer game that uses <strong>WebSockets</strong> via socket.io. I made this during the start of the Pandemic as a game I could play with friends on Zoom. Using what I learned from this project, I taught a workshop on WebSockets in <strong>JavaScript</strong> for Rutgers IEEE."
 metaDescription: An live multiplayer game made with WebSockets. 2020-01-01
