@@ -61,6 +61,8 @@ const AboutPage = ({ data: { site } }) => (
                             some of the photos I took below.
                         </li>
                     </ul>
+                    <p>Certification:</p>
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1a36aa9e-c18d-4471-bde8-e22e96d1857f" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
                 </div>
                 {/* <br />
                 <br />
