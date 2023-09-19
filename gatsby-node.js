@@ -1,13 +1,7 @@
 const path = require(`path`);
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-    const { createPage } = actions;
-    const { createRedirect } = actions
-
-    createRedirect({
-        fromPath: `/resume`,
-        toPath: `/assets/resume.pdf`,
-    })
+    const { createPage, createRedirect } = actions;
 
     const projectPostTemplate = path.resolve(`src/templates/postTemplate.js`);
 
@@ -34,6 +28,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         reporter.panicOnBuild(`Error while running GraphQL query.`);
         return;
     }
+
+    createRedirect({
+        fromPath: `/resume`,
+        toPath: `/assets/resume.pdf`,
+    })
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
