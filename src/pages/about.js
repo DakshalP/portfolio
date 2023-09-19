@@ -39,30 +39,23 @@ const AboutPage = ({ data: { site } }) => (
                     <p>Hi! I'm Dakshal Panicker. Here's a bit about me:</p>
                     <ul>
                         <li>
-                            I'm a full stack developer with experience in using{" "}
-                            <strong>Javascript</strong> on the frontend and
-                            backend. You can see some of my projects on the{" "}
-                            <Link to="/">homepage</Link>.
+                        I'm a senior <strong>Computer Science</strong> major at Rutgers University, specializing in full-stack <strong>software engineering</strong> and minoring in <strong>Data Science</strong>. 
                         </li>
                         <li>
-                            I'm a student at{" "}
-                            <strong>Rutgers University New Brunswick</strong>.
+                            I've cultivated a strong foundation in full-stack programming tools and languages, including <strong>React, JavaScript, Node.js, Python, SQL, and AWS</strong>.
                         </li>
                         <li>
-                            I'm majoring in <strong>Computer Science</strong>{" "}
-                            and minoring in <strong>Data Science</strong>.
+                            I am currently an <strong><a href="https://www.credly.com/badges/1a36aa9e-c18d-4471-bde8-e22e96d1857f/public_url">AWS Certified Cloud Practioner</a></strong>.
                         </li>
                         <li>
                             My hobbies include hiking, reading, and applying my
-                            coding skill to small hardware projects using
-                            Arduino.
+                            coding skill to hardware projects, usually on an Arduino or Raspberry Pi. 
                             <br />
                             <br />I also like nature photography. You can see
                             some of the photos I took below.
                         </li>
                     </ul>
-                    <p>Certification:</p>
-                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1a36aa9e-c18d-4471-bde8-e22e96d1857f" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                    <p>View my projects on the <Link to="/">homepage</Link>.</p>
                 </div>
                 {/* <br />
                 <br />
