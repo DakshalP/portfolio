@@ -2,6 +2,12 @@ const path = require(`path`);
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions;
+    const { createRedirect } = actions
+
+    createRedirect({
+        fromPath: `/resume`,
+        toPath: `/assets/resume.pdf`,
+    })
 
     const projectPostTemplate = path.resolve(`src/templates/postTemplate.js`);
 
