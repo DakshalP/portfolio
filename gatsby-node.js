@@ -29,11 +29,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         return;
     }
 
-    createRedirect({
-        fromPath: `/resume`,
-        toPath: `/assets/resume.pdf`,
-    })
-
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.frontmatter.path,
@@ -41,4 +36,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             context: {}, // additional data can be passed via context
         });
     });
+
+    createRedirect({
+        fromPath: `/resume`,
+        toPath: `/assets/resume.pdf`,
+        force: true,
+        redirectInBrowser: true
+    })
 };
