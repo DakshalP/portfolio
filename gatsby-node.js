@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-    const { createPage, createRedirect } = actions;
+    const { createPage } = actions;
 
     const projectPostTemplate = path.resolve(`src/templates/postTemplate.js`);
 
@@ -37,10 +37,4 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         });
     });
 
-    createRedirect({
-        fromPath: `/resume`,
-        toPath: `/assets/resume.pdf`,
-        force: true,
-        redirectInBrowser: true
-    })
 };

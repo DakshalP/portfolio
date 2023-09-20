@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
+import { Link } from 'gatsby';
+
 
 const Resume = () => {
     return (
@@ -21,10 +23,10 @@ const Resume = () => {
                         📄
                     </span>
                 </div>
-                <p>This page should redirect you to a PDF copy of my resume. If not, view it on Google Drive with this button:</p>
-                <a href="https://drive.google.com/drive/folders/18P6bqMNij-aZldUIwfob87YeUwm_w8GK?usp=sharing" className="button -primary">
+                <p>View and download a PDF copy of my resume using the button below:</p>
+                <Link to="/assets/resume.pdf" className="button -primary">
                     View my resume
-                </a>
+                </Link>
             </div>
         </Layout>
     );
